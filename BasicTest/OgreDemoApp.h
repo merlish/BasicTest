@@ -84,19 +84,25 @@ public:
 	DemoApp();
 	~DemoApp();
     
-	void startDemo();
+	//void startDemo();
+    void startDemoPartial();
 	
 	bool keyPressed(const OIS::KeyEvent &keyEventRef);
 	bool keyReleased(const OIS::KeyEvent &keyEventRef);
     
-private:
     void setupDemoScene();
-	void runDemo();
+    void runDemo();
+    
+private:
+    //void setupDemoScene();
+	//void runDemo();
     bool initializeRTShaderSystem(Ogre::SceneManager* sceneMgr);
     void finalizeRTShaderSystem();
 
 	Ogre::SceneNode*			m_pCubeNode;
 	Ogre::Entity*				m_pCubeEntity;
+    Ogre::SceneNode* m_pCube2N;
+    Ogre::Entity* m_pCube2E;
     
 	bool					m_bShutdown;
 #ifdef USE_RTSHADER_SYSTEM

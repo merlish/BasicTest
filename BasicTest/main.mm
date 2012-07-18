@@ -1,27 +1,23 @@
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-#include "OgreDemoApp.h"
-#include "AppDelegate.h"
+//#include "OgreDemoApp.h"
+//#include "AppDelegate.h"
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
 
-#if OGRE_PLATFORM == PLATFORM_WIN32 || OGRE_PLATFORM == OGRE_PLATFORM_WIN32
-#define WIN32_LEAN_AND_MEAN
-#include "windows.h"
 
-//|||||||||||||||||||||||||||||||||||||||||||||||
+#include "fakehaskell.h"
 
-INT WINAPI WinMain(HINSTANCE hInst, HINSTANCE, LPSTR strCmdLine, INT)
-#else
+
 int main(int argc, char **argv)
-#endif
+//#endif
 {
-#if defined(OGRE_IS_IOS)
+/*#if defined(OGRE_IS_IOS)
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
 	int retVal = UIApplicationMain(argc, argv, @"UIApplication", @"AppDelegate");
 	[pool release];
-	return retVal;
-#elif (OGRE_PLATFORM == OGRE_PLATFORM_APPLE) && __LP64__
+	return retVal;*/
+/*#elif (OGRE_PLATFORM == OGRE_PLATFORM_APPLE) && __LP64__
 	NSAutoreleasePool * pool = [[NSAutoreleasePool alloc] init];
     
     mAppDelegate = [[AppDelegate alloc] init];
@@ -31,9 +27,9 @@ int main(int argc, char **argv)
 	[pool release];
     
 	return retVal;
-#else
+#else*/
     
-	try
+	/*try
     {
 		DemoApp demo;
 		demo.startDemo();
@@ -45,9 +41,13 @@ int main(int argc, char **argv)
 #else
         fprintf(stderr, "An exception has occurred: %s\n", e.what());
 #endif
-    }
+    }*/
     
-#endif
+//#endif
+    
+    // This is my pretend Haskell code!  Love it.
+    fakeHaskell();
+    
     return 0;
 }
 

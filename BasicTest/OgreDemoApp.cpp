@@ -4,6 +4,8 @@ DemoApp::DemoApp()
 {
 	m_pCubeNode		= 0;
 	m_pCubeEntity   = 0;
+    m_pCube2N = 0;
+    m_pCube2E = 0;
 }
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
@@ -103,7 +105,8 @@ void DemoApp::finalizeRTShaderSystem()
 }
 #endif // USE_RTSHADER_SYSTEM
 
-void DemoApp::startDemo()
+// merlyn: renamed startDemo->startDemoPartial.  Removed call to setupDemoScene, runDemo from end; return instead!
+void DemoApp::startDemoPartial()
 {
 	new OgreFramework();
 	if(!OgreFramework::getSingletonPtr()->initOgre("DemoApp v1.0", this, 0))
@@ -142,9 +145,9 @@ void DemoApp::startDemo()
                                                                          baseWhiteNoLighting->getTechnique(1)->getPass(0)->getFragmentProgram()->getName());
 #endif
     
-	setupDemoScene();
+	//setupDemoScene();
 #if !((OGRE_PLATFORM == OGRE_PLATFORM_APPLE) && __LP64__)
-	runDemo();
+	//runDemo();
 #endif
 }
 
@@ -152,13 +155,17 @@ void DemoApp::startDemo()
 
 void DemoApp::setupDemoScene()
 {
-	OgreFramework::getSingletonPtr()->m_pSceneMgr->setSkyBox(true, "Examples/SpaceSkyBox");
+	//OgreFramework::getSingletonPtr()->m_pSceneMgr->setSkyBox(true, "Examples/SpaceSkyBox");
     
 	OgreFramework::getSingletonPtr()->m_pSceneMgr->createLight("Light")->setPosition(75,75,75);
     
-	m_pCubeEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("Cube", "ogrehead.mesh");
+	/*m_pCubeEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("Cube", "ogrehead.mesh");
 	m_pCubeNode = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("CubeNode");
 	m_pCubeNode->attachObject(m_pCubeEntity);
+    
+    m_pCube2E = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("Steve", Ogre::SceneManager::PT_CUBE);
+    m_pCube2N = OgreFramework::getSingletonPtr()->m_pSceneMgr->getRootSceneNode()->createChildSceneNode("SteveN");
+    m_pCube2N->attachObject(m_pCube2E);*/
 }
 
 //|||||||||||||||||||||||||||||||||||||||||||||||
