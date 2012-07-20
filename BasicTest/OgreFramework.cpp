@@ -28,13 +28,13 @@ OgreFramework::OgreFramework()
 	m_pKeyboard			= 0;
 	m_pMouse			= 0;
     
-#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
+/*#if OGRE_PLATFORM == OGRE_PLATFORM_APPLE
     m_ResourcePath = macBundlePath() + "/Contents/Resources/";
 #elif defined(OGRE_IS_IOS)
     m_ResourcePath = macBundlePath() + "/";
-#else
+#else*/
     m_ResourcePath = "";
-#endif
+//#endif
     m_pTrayMgr          = 0;
     m_FrameEvent        = Ogre::FrameEvent();
 }
@@ -57,14 +57,31 @@ bool OgreFramework::initOgre(Ogre::String wndTitle, OIS::KeyListener *pKeyListen
     pluginsPath = m_ResourcePath + "plugins.cfg";
 #endif
     
-    m_pRoot = new Ogre::Root(pluginsPath, Ogre::macBundlePath() + "/ogre.cfg");
+    m_pRoot = new Ogre::Root(pluginsPath, "ogre.cfg");
     
 #ifdef OGRE_STATIC_LIB
     m_StaticPluginLoader.load();
 #endif
     
-	if(!m_pRoot->showConfigDialog())
-		return false;
+    //m_pRoot->setRenderSystem(m_pRoot->getRenderSystemByName("GL"));
+    m_pRoot->loadPlugin("/Users/merlyn/BasicTest/haskell/RenderSystem_GL");
+    
+    RenderSystem* rs = m_pRoot->getAvailableRenderers()[0];
+    rs->setConfigOption("Colour Depth", "32");
+    rs->setConfigOption("FSAA", "0");
+    rs->setConfigOption("Full Screen", "No");
+    rs->setConfigOption("RTT Preferred Mode", "FBO");
+    rs->setConfigOption("VSync", "No");
+    rs->setConfigOption("VSync Interval", "1");
+    rs->setConfigOption("Video Mode", "1280 x 720");
+    rs->setConfigOption("sRGB Gamma Conversion", "No");
+    rs->setConfigOption("macAPI", "carbon");
+    
+    m_pRoot->setRenderSystem(rs);
+    
+    
+	//if(!m_pRoot->showConfigDialog())
+	//	return false;
 	m_pRenderWnd = m_pRoot->initialise(true, wndTitle);
     
 	m_pSceneMgr = m_pRoot->createSceneManager(ST_GENERIC, "SceneManager");

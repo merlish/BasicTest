@@ -23,6 +23,22 @@
 		D68EC36715B62EC900992E96 /* Ogre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68EC36615B62EC900992E96 /* Ogre.framework */; };
 		D68EC36A15B7713F00992E96 /* export.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D68EC36915B7713F00992E96 /* export.cpp */; };
 		D68EC36C15B77A0800992E96 /* fakehaskell.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D68EC36B15B77A0800992E96 /* fakehaskell.cpp */; };
+		D69FF5C715B8C912002E0B57 /* export.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D68EC36915B7713F00992E96 /* export.cpp */; };
+		D69FF5C915B8C925002E0B57 /* OgreDemoApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D639D78015B62E14007A2FFB /* OgreDemoApp.cpp */; };
+		D69FF5CA15B8C928002E0B57 /* OgreFramework.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D639D78315B62E15007A2FFB /* OgreFramework.cpp */; };
+		D69FF5CB15B8C934002E0B57 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68EC36415B62EB300992E96 /* OpenGL.framework */; };
+		D69FF5CC15B8C93C002E0B57 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68EC36215B62EA700992E96 /* QuartzCore.framework */; };
+		D69FF5CD15B8C941002E0B57 /* Carbon.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D639D76915B62E14007A2FFB /* Carbon.framework */; };
+		D69FF5CE15B8C94A002E0B57 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D639D76D15B62E14007A2FFB /* IOKit.framework */; };
+		D69FF5CF15B8C952002E0B57 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D639D76B15B62E14007A2FFB /* Cocoa.framework */; };
+		D69FF5D015B8C968002E0B57 /* Ogre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D68EC36615B62EC900992E96 /* Ogre.framework */; };
+		D69FF5D115B8C97C002E0B57 /* export.h in Headers */ = {isa = PBXBuildFile; fileRef = D68EC36815B7712C00992E96 /* export.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D69FF5D215B8C985002E0B57 /* OgreDemoApp.h in Headers */ = {isa = PBXBuildFile; fileRef = D639D78215B62E14007A2FFB /* OgreDemoApp.h */; settings = {ATTRIBUTES = (); }; };
+		D69FF5D315B8C98A002E0B57 /* OgreFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = D639D78515B62E15007A2FFB /* OgreFramework.h */; };
+		D69FF5D615B8C9D4002E0B57 /* ogre.cfg in Resources */ = {isa = PBXBuildFile; fileRef = D639D79815B62E15007A2FFB /* ogre.cfg */; };
+		D69FF5D715B8C9D7002E0B57 /* plugins.cfg in Resources */ = {isa = PBXBuildFile; fileRef = D639D79A15B62E15007A2FFB /* plugins.cfg */; };
+		D69FF5D815B8C9D9002E0B57 /* resources.cfg in Resources */ = {isa = PBXBuildFile; fileRef = D639D79C15B62E15007A2FFB /* resources.cfg */; };
+		D69FF5DA15B8CA0D002E0B57 /* skybox.zip in Resources */ = {isa = PBXBuildFile; fileRef = D69FF5D915B8CA0D002E0B57 /* skybox.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +78,8 @@
 		D68EC36915B7713F00992E96 /* export.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = export.cpp; sourceTree = "<group>"; };
 		D68EC36B15B77A0800992E96 /* fakehaskell.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fakehaskell.cpp; sourceTree = "<group>"; };
 		D68EC36D15B77C4400992E96 /* fakehaskell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fakehaskell.h; sourceTree = "<group>"; };
+		D69FF5C215B8C8D3002E0B57 /* libexport.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libexport.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		D69FF5D915B8CA0D002E0B57 /* skybox.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; name = skybox.zip; path = BasicTest/media/packs/skybox.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,12 +96,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D69FF5BF15B8C8D3002E0B57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69FF5D015B8C968002E0B57 /* Ogre.framework in Frameworks */,
+				D69FF5CF15B8C952002E0B57 /* Cocoa.framework in Frameworks */,
+				D69FF5CE15B8C94A002E0B57 /* IOKit.framework in Frameworks */,
+				D69FF5CD15B8C941002E0B57 /* Carbon.framework in Frameworks */,
+				D69FF5CC15B8C93C002E0B57 /* QuartzCore.framework in Frameworks */,
+				D69FF5CB15B8C934002E0B57 /* OpenGL.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		D639D75915B62E14007A2FFB = {
 			isa = PBXGroup;
 			children = (
+				D69FF5D915B8CA0D002E0B57 /* skybox.zip */,
 				D68EC36615B62EC900992E96 /* Ogre.framework */,
 				D68EC36415B62EB300992E96 /* OpenGL.framework */,
 				D68EC36215B62EA700992E96 /* QuartzCore.framework */,
@@ -97,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				D639D76515B62E14007A2FFB /* BasicTest.app */,
+				D69FF5C215B8C8D3002E0B57 /* libexport.dylib */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -221,6 +254,19 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D69FF5C015B8C8D3002E0B57 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69FF5D115B8C97C002E0B57 /* export.h in Headers */,
+				D69FF5D315B8C98A002E0B57 /* OgreFramework.h in Headers */,
+				D69FF5D215B8C985002E0B57 /* OgreDemoApp.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
 		D639D76415B62E14007A2FFB /* BasicTest */ = {
 			isa = PBXNativeTarget;
@@ -239,6 +285,24 @@
 			productName = BasicTest;
 			productReference = D639D76515B62E14007A2FFB /* BasicTest.app */;
 			productType = "com.apple.product-type.application";
+		};
+		D69FF5C115B8C8D3002E0B57 /* BasicTestLib */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D69FF5C515B8C8D3002E0B57 /* Build configuration list for PBXNativeTarget "BasicTestLib" */;
+			buildPhases = (
+				D69FF5BE15B8C8D3002E0B57 /* Sources */,
+				D69FF5BF15B8C8D3002E0B57 /* Frameworks */,
+				D69FF5C015B8C8D3002E0B57 /* Headers */,
+				D69FF5D415B8C9A6002E0B57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BasicTestLib;
+			productName = BasicTestLib;
+			productReference = D69FF5C215B8C8D3002E0B57 /* libexport.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
 		};
 /* End PBXNativeTarget section */
 
@@ -261,6 +325,7 @@
 			projectRoot = "";
 			targets = (
 				D639D76415B62E14007A2FFB /* BasicTest */,
+				D69FF5C115B8C8D3002E0B57 /* BasicTestLib */,
 			);
 		};
 /* End PBXProject section */
@@ -275,6 +340,17 @@
 				D639D79915B62E15007A2FFB /* ogre.cfg in Resources */,
 				D639D79B15B62E15007A2FFB /* plugins.cfg in Resources */,
 				D639D79D15B62E15007A2FFB /* resources.cfg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D69FF5D415B8C9A6002E0B57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69FF5DA15B8CA0D002E0B57 /* skybox.zip in Resources */,
+				D69FF5D815B8C9D9002E0B57 /* resources.cfg in Resources */,
+				D69FF5D715B8C9D7002E0B57 /* plugins.cfg in Resources */,
+				D69FF5D615B8C9D4002E0B57 /* ogre.cfg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,6 +382,16 @@
 				D639D78415B62E15007A2FFB /* OgreFramework.cpp in Sources */,
 				D68EC36A15B7713F00992E96 /* export.cpp in Sources */,
 				D68EC36C15B77A0800992E96 /* fakehaskell.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D69FF5BE15B8C8D3002E0B57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D69FF5CA15B8C928002E0B57 /* OgreFramework.cpp in Sources */,
+				D69FF5C915B8C925002E0B57 /* OgreDemoApp.cpp in Sources */,
+				D69FF5C715B8C912002E0B57 /* export.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +496,63 @@
 			};
 			name = Release;
 		};
+		D69FF5C315B8C8D3002E0B57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/SDKs/OgreSDK/lib/release\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = export;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+		D69FF5C415B8C8D3002E0B57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(DEVELOPER_DIR)/SDKs/OgreSDK/lib/release\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				PRODUCT_NAME = export;
+				SDKROOT = macosx10.6;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -430,6 +573,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D69FF5C515B8C8D3002E0B57 /* Build configuration list for PBXNativeTarget "BasicTestLib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D69FF5C315B8C8D3002E0B57 /* Debug */,
+				D69FF5C415B8C8D3002E0B57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

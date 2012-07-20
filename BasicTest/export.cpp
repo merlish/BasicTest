@@ -13,8 +13,27 @@ extern "C"
     DemoApp* initDemo()
     {
         // var belongs to function; can only call initDemo() once safely.
-        DemoApp* d = new DemoApp();
-        d->startDemoPartial();
+        DemoApp* d;
+        
+        try
+        {
+            d = new DemoApp();
+        }
+        catch (std::exception& e)
+        {
+            fprintf(stderr, "An exception occurred in new DemoApp(): %s\n", e.what());
+        }
+        
+        
+        try
+        {
+            d->startDemoPartial();
+        }
+        catch(std::exception& e)
+        {
+            fprintf(stderr, "An exception has occurred in d->startDemoPartial(): %s\n", e.what());
+        }
+        
         return d;
     }
     

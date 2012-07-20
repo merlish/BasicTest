@@ -115,7 +115,8 @@ void DemoApp::startDemoPartial()
 	m_bShutdown = false;
     
 	OgreFramework::getSingletonPtr()->m_pLog->logMessage("Demo initialized!");
-	
+	printf("adi\n");
+    
 #ifdef USE_RTSHADER_SYSTEM
     initializeRTShaderSystem(OgreFramework::getSingletonPtr()->m_pSceneMgr);
     Ogre::MaterialPtr baseWhite = Ogre::MaterialManager::getSingleton().getByName("BaseWhite", Ogre::ResourceGroupManager::INTERNAL_RESOURCE_GROUP_NAME);				
@@ -157,6 +158,7 @@ void DemoApp::setupDemoScene()
 {
 	//OgreFramework::getSingletonPtr()->m_pSceneMgr->setSkyBox(true, "Examples/SpaceSkyBox");
     
+    printf("\n\nhi from setupdemoscene!\n\n");
 	OgreFramework::getSingletonPtr()->m_pSceneMgr->createLight("Light")->setPosition(75,75,75);
     
 	/*m_pCubeEntity = OgreFramework::getSingletonPtr()->m_pSceneMgr->createEntity("Cube", "ogrehead.mesh");
